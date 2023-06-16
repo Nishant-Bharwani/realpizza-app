@@ -63,10 +63,10 @@ app.get('/api/razorpay/getKey', (req, res) => {
 });
 
 
-// if (process.env.NODE_ENV === "production") {
-app.use(express.static(path.resolve(__dirname, "../frontend/build")));
-app.get("*", (req, res) => res.sendFile(path.resolve(__dirname, "../frontend/build/index.html")));
-// }
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.resolve(__dirname, "../frontend/build")));
+    app.get("*", (req, res) => res.sendFile(path.resolve(__dirname, "../frontend/build/index.html")));
+}
 
 
 server.listen(PORT, HOST, function(err) {
