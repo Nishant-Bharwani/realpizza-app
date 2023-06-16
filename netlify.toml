@@ -1,0 +1,7 @@
+[build]
+  command = "npm install --prefix frontend && npm run build --prefix frontend && npm install --prefix backend"
+  publish = "frontend/build"
+
+[dev]
+  command = "npm install --prefix frontend && npm run start --prefix backend"
+  publish = "frontend/build"
