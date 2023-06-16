@@ -1,0 +1,76 @@
+.pizza-button {
+    background-color: #dd4b39;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pizza-topping {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.4;
+    animation: toppings 1s linear infinite;
+}
+
+.pizza-topping::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #f5d76e;
+    /* box-shadow: 0 0 10px #f5d76e; */
+    animation: move-toppings 2s linear infinite;
+}
+
+.pizza-topping::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #f5d76e;
+    /* box-shadow: 0 0 10px #f5d76e; */
+    animation: move-toppings 3s linear infinite;
+}
+
+@keyframes move-toppings {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    25% {
+        transform: translate(25%, 75%);
+    }
+    50% {
+        transform: translate(50%, 50%);
+    }
+    75% {
+        transform: translate(75%, 25%);
+    }
+    100% {
+        transform: translate(50%, 50%);
+    }
+}
+
+.pizza-button:hover .pizza-topping::before,
+.pizza-button:hover .pizza-topping::after {
+    animation-play-state: paused;
+}
+
+.pizza-button:hover .pizza-topping {
+    animation-play-state: running;
+}

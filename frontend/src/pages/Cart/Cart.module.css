@@ -1,0 +1,51 @@
+.orderHeading {
+    font-weight: bold;
+    margin-left: 4px;
+    font-size: 2rem;
+}
+
+.order>div:first-child {
+    border-bottom: 1px solid #D1D5DB;
+}
+
+.orderForm {}
+
+.cartList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cartList i {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.formInputField {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CBD5E0;
+    padding: 0.5rem;
+    width: 50%;
+}
+
+.cartSubmitBtn {
+    background-color: #dd4b39;
+    color: #fff;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 9999px;
+    color: #fff;
+    margin-top: 1.5rem;
+    text-decoration: none;
+}
+
+.cartSubmitBtn:hover {
+    background-color: #c5301c;
+}

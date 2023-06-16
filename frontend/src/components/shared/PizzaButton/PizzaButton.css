@@ -1,0 +1,42 @@
+.pizza-topping {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #d0983f;
+    opacity: 0.8;
+    transition: all 0.3s linear;
+}
+
+.pizza-button:hover .pizza-topping {
+    transform: translate(-10%, -10%);
+    /* opacity: 1; */
+    animation: move-toppings 10s linear infinite;
+}
+
+.pizza-button:hover {
+    background-color: #c02c18;
+}
+
+.pizza-button {
+    background-color: #dd4b39;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes move-toppings {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(calc(100% - 50px), calc(100% - 50px));
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}

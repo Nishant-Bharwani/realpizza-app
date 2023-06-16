@@ -1,0 +1,88 @@
+/* Style for the page title */
+
+.customizePageWrapper {
+    height: 80vh;
+}
+
+.customizePageWrapper h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #dd4b39;
+}
+
+.pizzaCaption {
+    color: #dd4b39;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+
+/* Style for the image */
+
+.customizePageWrapper img {
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+/* Style for the form container */
+
+.pizzaControllers {
+    margin-top: 30px;
+}
+
+
+/* Style for the select boxes */
+
+.customizePageWrapper select {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Style for the submit button */
+
+.customizePageWrapper button {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #dd4b39;
+    color: #fff;
+    cursor: pointer;
+}
+
+.veggiesContainer {
+    width: 400px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.labelVeggie {
+    margin-left: 10px;
+}
+
+.veggieInputCheckbox:disabled+.labelVeggie {
+    color: #ccc;
+}
+
+.textDanger {
+    color: #dd4b39;
+    font-weight: bold;
+    margin-top: 10px;
+}

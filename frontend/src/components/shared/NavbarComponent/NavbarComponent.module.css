@@ -1,0 +1,68 @@
+.pizzaNavbar {
+    background-color: #fff;
+    /* background-color: #DD4B39; */
+    height: auto;
+}
+
+.pizzaNavbarBrand {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.pizzaNavLink {
+    color: #dd4b39;
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.pizzaNavLink:hover {
+    color: #000;
+}
+
+li span img {
+    text-align: center;
+    /* margin: 0.5rem 0rem; */
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.profilePicMenu {
+    margin: 0;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.profilePicDropdown {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.profilePicDropdown li {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.profilePicDropdown li:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.profilePicDropdown li:hover>.profilePicDropdown li a {
+    color: #000;
+}
+
+.profilePicDropdown li a {
+    color: #dd4b39;
+    font-weight: 600;
+}

@@ -1,0 +1,102 @@
+.dashboardPage {
+    padding-bottom: 24px;
+}
+
+.pageTitle {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #dd4b39;
+}
+
+.pizzaCardContainer {
+    margin-top: 2rem;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.pizzaCard {
+    border: none;
+}
+
+.pizzaName {
+    font-weight: bold;
+}
+
+.pizzaDescription {
+    height: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pizzaPrice {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.orderButton {
+    margin-top: 1rem;
+    width: 100%;
+    background-color: #dd4b39;
+    border-color: #dd4b39;
+}
+
+.dashboard-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.allPizzaWrapper {
+    /* display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pizzaCardWrapper {
+    padding-bottom: 12px;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    border: 1px solid #000;
+    margin: 24px 24px;
+    box-sizing: border-box;
+}
+
+.pizzaCardTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.pizzaInfo {
+    background-color: #edf2f7;
+    /* padding-top: 25px; */
+    /* padding-bottom: 10px; */
+    padding: 5px 20px;
+    border-radius: 9999px;
+    /* padding-top: 2.25rem; */
+    /* padding-bottom: 2.25rem; */
+    font-size: 0.775rem;
+    font-size: 0.775rem;
+    font-weight: bold;
+}
+
+.orderBtn {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    border: none;
+    border-radius: 9999px;
+    font-weight: bold;
+    background-color: #F59E0B;
+}
