@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { verifyEmail } from '../../http';
 import { setAuth } from '../../store/authSlice';
 
@@ -29,7 +29,7 @@ const VerifyEmail = () => {
 
 
     return (
-        <div>VerifyEmail, {verificationStatus}</div>
+        <div>Verifying Email . . .{verificationStatus}</div>
     )
 }
 

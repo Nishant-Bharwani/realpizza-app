@@ -3,11 +3,6 @@ const { BASE_URL } = require('../config');
 
 const { Schema } = mongoose;
 
-const toppingSchema = new Schema({
-    name: { type: String, required: true },
-    price: { type: Number, required: true },
-});
-
 const pizzaSchema = new Schema({
     name: { type: String, required: true },
     description: { type: String, required: true },
