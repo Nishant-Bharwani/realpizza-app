@@ -16,7 +16,6 @@ export function useLoadingWithRefresh() {
                     withCredentials: true
                 });
 
-                console.log(`${process.env.CLIENT_URL}/api/auth/refreshToken`);
                 dispatch(setAuth(data));
                 setLoading(false);
             } catch (err) {

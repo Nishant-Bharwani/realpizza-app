@@ -6,6 +6,7 @@ const hashService = require('../services/hash-service');
 const tokenService = require('../services/token-service');
 const mailService = require('../services/mail-service');
 const UserDto = require('../dtos/user-dto');
+const { BASE_URL } = require('../config');
 
 class AuthController {
     async registerUser(req, res) {
@@ -37,7 +38,7 @@ class AuthController {
                 html: `
               <p>Hi ${name},</p>
               <p>Thank you for registering with RealPizza</p>
-              <p>Please click <a href="${process.env.CLIENT_URL}/auth/verify/${token}">here</a> to verify your email address.</p>
+              <p>Please click <a href="${BASE_URL}/auth/verify/${token}">here</a> to verify your email address.</p>
               <p>If you did not request this, please ignore this email.</p>
               <p>Regards,</p>
               <p>Team RealPizza</p>
@@ -157,7 +158,7 @@ class AuthController {
                 from: process.env.EMAIL_ADDRESS,
                 to: email,
                 subject: 'Reset your password',
-                text: `Click on this link to reset your password: ${process.env.CLIENT_URL}/reset-password/${resetToken}`
+                text: `Click on this link to reset your password: ${BASE_URL}/reset-password/${resetToken}`
             };
             await mailService.sendMail(mailOptions);
 

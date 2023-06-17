@@ -1,6 +1,6 @@
 // Server details
 exports.HOST = process.env.HOST;
-exports.BASE_URL = process.env.BASE_URL;
+exports.BASE_URL = process.env.NODE_ENV === 'production' ? 'https://realpizza.onrender.com/' : 'http://localhost:5000';
 
 
 // Databse host details

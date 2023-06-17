@@ -1,5 +1,5 @@
 const shortid = require('shortid');
-const { RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET } = require('../config');
+const { RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET, BASE_URL } = require('../config');
 const orderService = require('../services/order-service');
 const userService = require('../services/user-service');
 const OrderModel = require('../models/order-model');
@@ -137,7 +137,7 @@ class OrderController {
                 return res.status(400).json({ message: 'Request signature did not match. Please try again with a valid signature.' })
 
             } else {
-                res.redirect(`${process.env.CLIENT_URL}/custom-pizza`);
+                res.redirect(`${BASE_URL}/custom-pizza`);
             }
 
 

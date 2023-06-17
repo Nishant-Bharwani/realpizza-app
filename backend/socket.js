@@ -1,10 +1,12 @@
+const { BASE_URL } = require('./config');
+
 let io;
 
 module.exports = {
     init: (server) => {
         io = require('socket.io')(server, {
             cors: {
-                origin: `${process.env.CLIENT_URL}`,
+                origin: `${BASE_URL}`,
                 methods: ['GET', "POST"]
             }
         });
