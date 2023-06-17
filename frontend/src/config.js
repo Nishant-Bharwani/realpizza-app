@@ -1,5 +1,5 @@
 const prod = {
-    API_URL: 'https://realpizza.netlify.app'
+    API_URL: 'https://realpizza.onrender.com'
 };
 
 const dev = {
