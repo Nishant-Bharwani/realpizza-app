@@ -3,6 +3,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useSelector } from "react-redux";
 import { getRazorpayKey } from "../../http";
 
+import { config } from "../../config";
 import styles from "./OrderModal.module.css";
 const OrderModal = (props) => {
     const [address, setAddress] = useState("");
@@ -32,9 +33,9 @@ const OrderModal = (props) => {
                 currency: "INR",
                 name: "Real Pizza",
                 description: "Test Transaction",
-                image: `${process.env.REACT_APP_API_URL}/storage/logo.png`,
+                image: `${config.API_URL}/storage/logo.png`,
                 order_id: props.orderData.razorpayOrder.id,
-                callback_url: `${process.env.REACT_APP_API_URL}/api/order/confirmOrder?orderId=${props.orderData.order.orderId}&address=${address}&phone=${phone}`,
+                callback_url: `${config.API_URL}/api/order/confirmOrder?orderId=${props.orderData.order.orderId}&address=${address}&phone=${phone}`,
                 headers: {
                     address: address,
                     phone: phone

@@ -1,4 +1,5 @@
 import { io } from 'socket.io-client';
+import { config } from '../config';
 
 export const socketInit = () => {
     const options = {
@@ -9,5 +10,5 @@ export const socketInit = () => {
 
     };
 
-    return io(`${process.env.REACT_APP_API_URL}`, options);
+    return io(`${config.API_URL}`, options);
 };

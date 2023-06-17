@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
+import { config } from '../config';
 import { setAuth } from "../store/authSlice";
 
 export function useLoadingWithRefresh() {
@@ -11,11 +12,11 @@ export function useLoadingWithRefresh() {
         (async () => {
 
             try {
-                const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/refreshToken`, {
+                const { data } = await axios.get(`${config.API_URL}/api/auth/refreshToken`, {
                     withCredentials: true
                 });
 
-
+                console.log(`${process.env.CLIENT_URL}/api/auth/refreshToken`);
                 dispatch(setAuth(data));
                 setLoading(false);
             } catch (err) {

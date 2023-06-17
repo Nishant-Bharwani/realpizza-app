@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Toaster, toast } from 'react-hot-toast';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { config } from '../../config';
 import { getCart, getRazorpayKey, orderCart, removeFromCart } from '../../http';
 import styles from './Cart.module.css';
 import emptyCardStyles from './EmptyCart.module.css';
@@ -73,9 +74,9 @@ const Cart = () => {
                 currency: "INR",
                 name: "Real Pizza",
                 description: "Test Transaction",
-                image: `${process.env.REACT_APP_API_URL}/storage/logo.png`,
+                image: `${config.API_URL}/storage/logo.png`,
                 order_id: data.order.razorpayOrder.id,
-                callback_url: `${process.env.REACT_APP_API_URL}/api/order/confirmCartOrder?orderId=${data.order.orderId}`,
+                callback_url: `${config.API_URL}/api/order/confirmCartOrder?orderId=${data.order.orderId}`,
                 headers: {
                     'orderId': `${data.order.orderId}`
                 },
