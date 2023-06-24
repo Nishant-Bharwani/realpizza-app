@@ -54,3 +54,11 @@ form {
     padding: 20px;
     border-radius: 10px;
 }
+
+.admin {
+    text-decoration: none !important;
+}
+
+.admin:hover {
+    color: #dd4b39 !important;
+}

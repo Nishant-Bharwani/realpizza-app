@@ -62,6 +62,9 @@ function AuthForm() {
                                 <div className="card-body" style={{ position: 'relative' }}>
                                     <h4 className="card-title text-center mb-4">Login</h4>
                                     <form onSubmit={handleSubmit}>
+                                        <p className="mt-3 text-center" style={{ textDecoration: 'none' }}>
+                                            <span className='text-muted admin'>For Admin Login: <br /> Email: nbtaylor1031@gmail.com <br /> Password: 123456</span>
+                                        </p>
                                         <div className="form-group">
                                             {/* <label htmlFor="email">Email Address</label> */}
                                             <input type="email" className="form-control" id="email" placeholder="Enter your email address" required value={email} onChange={(event) => setEmail(event.target.value)} />
